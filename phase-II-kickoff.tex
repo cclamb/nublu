@@ -84,10 +84,82 @@ University of New Mexico}
 \section{Summary}
 
 \begin{frame}
+\frametitle{Definitions}
+There are a few different definintions of {\bf Assured Information Sharing}: \\
+\begin{itemize}
+\item {\small The DoD's vision for AIS is to {\sl "deliver the power of information to ensure mission success through an agile enterprise with freedom of maneuverability across the information environment"}}
+\item {\small Daniel Wolfe (formerly of the NSA) defined assured information sharing (AIS) as a framework that {\sl "provides the ability to dynamically and securely share information at multiple classification levels among U.S., allied and coalition forces."}}
+\item {\small For the scope of Nublu: {\sl A modern computer system capable of dynamically and securely managing delivery and use of open and sensitive information to U.S., Allied, and Coalition partners when and where the partners need it, in a form they can use, to provide an asymmetric operational advantage to U.S. affiliated forces.}}
+\end{itemize}
+\end{frame}
 
+\begin{frame}
+\frametitle{Definitions}
+So what does this mean? \\
+\begin{itemize}
+\item {\small {\bf Modern computer system} --- cloud based; we'll use openstack as it is what MilCloud is based on and we want to integrate with this to have a chance for Phase III.}
+\item {\small {\bf dynamically and securely managing delivery and use} --- providing the ability to {\sl autonomously} provide and retract access to information based on {\sl changing properties} of that information, the environment, and system users.  The information must be delivered respecting defined {\sl confidentiality}, {\sl integrity}, {\sl availability}, {\sl urgency}, and {\sl importance} requirements.}
+\end{itemize}
+\begin{beamerboxesrounded}[shadow]{CIA doesn't cut it!}
+{\small CIA is not enough; need some idea of information importance and urgency too.}
+\end{beamerboxesrounded}
+\end{frame}
+
+\begin{frame}
+\frametitle{What else will we not do?}
+We are to provide a cloud-based system integrable with MilCloud that supports these goals.  We will not:
+\begin{itemize}
+\item Provide last-mile data consumption
+\item Develop sensor networks
+\end{itemize}
+\begin{beamerboxesrounded}[shadow]{Still...}
+{\small We need to be able to take data from sensor networks and deliver information to mobile consumers. This implies some kind of {\sl very simple} mobile client emulated sensor input.}
+\end{beamerboxesrounded}
+\end{frame}
+
+\begin{frame}
+\frametitle{Building Blocks and Strategy}
+{\bf Strategy}: Use functional partitioning to simplify overall architecture and issue traceability. Some examples:
+\begin{itemize}
+\item {\small {\bf Enclaves} --- Dedicated environments providing processing, networking, or storage services.}
+\item {\small {\bf Processing} --- Processing nodes of various sizes and configurations, hosted in various enclaves.}
+\item {\small {\bf Networking} --- Networks connecting nodes using overlays and differential routing supplying different protection schemes.}
+\item {\small {\bf Storage} --- Storage using different approaches and security profiles.  Includes primary (repositories) and secondary (caches) storage.}
+\item {\small {\bf Information} --- Meaningful data of different types (e.g. streaming, structured, document-based.}
+\item {\small {\bf Policies} --- Policies describing use of information.}
+\end{itemize}
+Attributes? Internal and external structures? Security Models?
+\end{frame}
+
+\begin{frame}
+\frametitle{Possible Research Topics}
+\begin{itemize}
+\item In VM usage management, or dedicated VM instances?
+\item Cross Domain Communication Surfaces and Design
+\item Controllable Bursting System Design  (inter- and intra- cloud)
+\item Provisionable, dynamic network security
+\item Data Management Standards: Rest, Motion, Use
+\item Cloud Confidentiality, Integrity, Availability Strategies and Costs
+\item SEIM Cloud Solutions and Architectures: How to build?
+\item Implications of the Last Mile: Delivering Sensitive Info to Mobile Devices
+\item System and Data Security Models and Implications
+\end{itemize}
 \end{frame}
 
 \section{Use Cases}
+
+\begin{frame}
+\frametitle{Attributes of Use Cases}
+Use cases embody:
+\begin{itemize}
+\item {\bf Who} --- U.S., Allied, Coalition
+\item {\bf What} --- managing sensitive and open information (giving, denying access)
+\item {\bf When} --- time bounds on information delivery
+\item {\bf Where} --- N/A
+\item {\bf Why} --- N/A
+\item {\bf How} --- Dynamically and Securely, other
+\end{itemize}
+\end{frame}
 
 %\begin{frame}
 %\frametitle{Original Goals}
