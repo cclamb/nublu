@@ -105,6 +105,92 @@ So what does this mean? \\
 \end{beamerboxesrounded}
 \end{frame}
 
+\section{Phase I}
+
+\begin{frame}
+\frametitle{Phase I Goals}
+{\bf Original Concept of Operations} --- resource access and virtual machine instantiation is a function of user authorization, operating context, resource attributes, and usage policies.
+
+\begin{itemize}
+{\small
+\item \textit{\textbf{Confidentiality}} --- Proof-of-concept in Phase I, extended in Phase II
+\item \textit{\textbf{Integrity}} --- To be addressed in Phase II
+\item \textit{\textbf{Availability}} --- Out of scope for Nublu
+}
+\end{itemize}
+~\\~\\
+
+\begin{beamerboxesrounded}[shadow]{Usage Management System}
+Controls the initial resource access and cloud computing system provisioning.
+Monitors the resource security parameters, cloud computing resource security characteristics, and operator context to provide continuous control.
+\end{beamerboxesrounded}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Operation --- Initial Configuration}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\textwidth]{3}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Operation --- Dynamic Re-configuration 1}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\textwidth]{4}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Operation --- Dynamic Re-configuration 2}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\textwidth]{5}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Operation --- Usage Management}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\textwidth]{6}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Operation --- Dynamic Re-configuration 3}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\textwidth]{7}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Span of Control --- IaaS}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\textwidth]{8}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Application Software and OS}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\textwidth]{9}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Layering with VMWare}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\textwidth]{10}
+\end{figure}
+\end{frame}
+
 \begin{frame}
 \frametitle{What else will we not do?}
 We are to provide a cloud-based system integrable with MilCloud that supports these goals.  We will not:
@@ -160,17 +246,5 @@ Use cases embody:
 \item {\bf How} --- Dynamically and Securely, other
 \end{itemize}
 \end{frame}
-
-%\begin{frame}
-%\frametitle{Original Goals}
-%\begin{beamerboxesrounded}[shadow]{Contribution of Work}
-%The contribution of this work is a quantitative analysis of policy-centric overlay network options, associated taxonomies of use, and prototypical technology proofs-of-concept.
-%\end{beamerboxesrounded}
-%\begin{itemize}
-%\item \textit{Network Control Options} --- {\small This includes various types networks and associated strengths and weaknesses addressing centralized and decentralized models.}
-%\item \textit{Taxonomies of Use} --- {\small Depending on the specific usage management requirements and context, different overlays have different applicability; this work will provide guidance on suitability; it will eventually lead to how to manage data flow within SDN-capable infrastructure.}
-%\item \textit{Prototypical Technologies} --- {\small Examples and proofs-of-concept will be required to appropriately analyze various architectural alternatives.}
-%\end{itemize}
-%\end{frame}
 
 \end{document}
