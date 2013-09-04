@@ -100,7 +100,7 @@ So what does this mean? \\
 \item {\small {\bf Modern computer system} --- cloud based; we'll use openstack as it is what MilCloud is based on and we want to integrate with this to have a chance for Phase III.}
 \item {\small {\bf dynamically and securely managing delivery and use} --- providing the ability to {\sl autonomously} provide and retract access to information based on {\sl changing properties} of that information, the environment, and system users.  The information must be delivered respecting defined {\sl confidentiality}, {\sl integrity}, {\sl availability}, {\sl urgency}, and {\sl importance} requirements.}
 \end{itemize}
-\begin{beamerboxesrounded}[shadow]{CIA doesn't cut it!}
+\begin{beamerboxesrounded}[shadow]{CIA isn't sufficient}
 {\small CIA is not enough; need some idea of information importance and urgency too.}
 \end{beamerboxesrounded}
 \end{frame}
@@ -109,20 +109,19 @@ So what does this mean? \\
 
 \begin{frame}
 \frametitle{Phase I Goals}
-{\bf Original Concept of Operations} --- resource access and virtual machine instantiation is a function of user authorization, operating context, resource attributes, and usage policies.
-
+{\bf Original Concept of Operations} --- resource access and virtual machine instantiation is a function of user authorization, operating context, resource attributes, and usage policies.  Phase II builds on phase I via:
 \begin{itemize}
 {\small
-\item \textit{\textbf{Confidentiality}} --- Proof-of-concept in Phase I, extended in Phase II
-\item \textit{\textbf{Integrity}} --- To be addressed in Phase II
-\item \textit{\textbf{Availability}} --- Out of scope for Nublu
+\item \textit{\textbf{Confidentiality}} --- Data object key management, user key management, homomorphic encryption
+\item \textit{\textbf{Integrity}} --- Individual and Group signature schemes, integrated integrity verification checking
+\item \textit{\textbf{Availability}} --- Hardened instances, redundant images
 }
 \end{itemize}
-~\\~\\
+Other areas of work include robust, graduated logging and auditing.
 
 \begin{beamerboxesrounded}[shadow]{Usage Management System}
-Controls the initial resource access and cloud computing system provisioning.
-Monitors the resource security parameters, cloud computing resource security characteristics, and operator context to provide continuous control.
+{\small Controls the initial resource access and cloud computing system provisioning.
+Monitors the resource security parameters, cloud computing resource security characteristics, and operator context to provide continuous control.}
 \end{beamerboxesrounded}
 
 \end{frame}
@@ -168,10 +167,15 @@ Monitors the resource security parameters, cloud computing resource security cha
 \end{frame}
 
 \begin{frame}
+\frametitle{Building on Phase I}
+
+\end{frame}
+
+\begin{frame}
 \frametitle{Span of Control --- IaaS}
 \begin{figure}[!t]
 \centering
-\includegraphics[width=\textwidth]{8}
+\includegraphics[width=\textwidth]{8-crop}
 \end{figure}
 \end{frame}
 
@@ -179,7 +183,7 @@ Monitors the resource security parameters, cloud computing resource security cha
 \frametitle{Application Software and OS}
 \begin{figure}[!t]
 \centering
-\includegraphics[width=\textwidth]{9}
+\includegraphics[width=\textwidth]{9-crop}
 \end{figure}
 \end{frame}
 
@@ -187,8 +191,21 @@ Monitors the resource security parameters, cloud computing resource security cha
 \frametitle{Layering with VMWare}
 \begin{figure}[!t]
 \centering
-\includegraphics[width=\textwidth]{10}
+\includegraphics[width=\textwidth]{10-crop}
 \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Key Considerations}
+\begin{itemize}
+\item The interfaces between the application and operating system, and between the operating system and the hardware, lend themselves to the introduction of control functions.
+\item It is highly undesirable to modify the operating system itself because of the size and complexity.
+\item It is also undesirable to modify application software.
+\item Hardware components like the TPM can provide extremely useful capabilities in private cloud environments.
+\item Encryption is a key element in information security.Partially homomorphic encryption can be useful in some applications, but is not a universal solution.
+\item Isolation methods using nested virtualization are very useful.
+\item Key management procedures and certificates will be essential.
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -207,12 +224,14 @@ We are to provide a cloud-based system integrable with MilCloud that supports th
 \frametitle{Building Blocks and Strategy}
 {\bf Strategy}: Use functional partitioning to simplify overall architecture and issue traceability. Some examples:
 \begin{itemize}
-\item {\small {\bf Enclaves} --- Dedicated environments providing processing, networking, or storage services.}
-\item {\small {\bf Processing} --- Processing nodes of various sizes and configurations, hosted in various enclaves.}
-\item {\small {\bf Networking} --- Networks connecting nodes using overlays and differential routing supplying different protection schemes.}
-\item {\small {\bf Storage} --- Storage using different approaches and security profiles.  Includes primary (repositories) and secondary (caches) storage.}
-\item {\small {\bf Information} --- Meaningful data of different types (e.g. streaming, structured, document-based.}
-\item {\small {\bf Policies} --- Policies describing use of information.}
+{\small 
+\item {\bf Enclaves} --- Dedicated environments providing processing, networking, or storage services.
+\item {\bf Processing} --- Processing nodes of various sizes and configurations, hosted in various enclaves.
+\item {\bf Networking} --- Networks connecting nodes using overlays and differential routing supplying different protection schemes.
+\item {\bf Storage} --- Storage using different approaches and security profiles.  Includes primary (repositories) and secondary (caches) storage.
+\item {\bf Information} --- Meaningful data of different types (e.g. streaming, structured, document-based.
+\item {\bf Policies} --- Policies describing use of information.
+}
 \end{itemize}
 Attributes? Internal and external structures? Security Models?
 \end{frame}
