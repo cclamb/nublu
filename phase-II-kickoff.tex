@@ -237,19 +237,36 @@ Attributes? Internal and external structures? Security Models?
 \end{frame}
 
 \begin{frame}
-\frametitle{Possible Research Topics}
-\begin{itemize}
-\item In VM usage management, or dedicated VM instances?
-\item Cross Domain Communication Surfaces and Design
-\item Controllable Bursting System Design  (inter- and intra- cloud)
-\item Provisionable, dynamic network security
-\item Data Management Standards: Rest, Motion, Use
-\item Cloud Confidentiality, Integrity, Availability Strategies and Costs
-\item SEIM Cloud Solutions and Architectures: How to build?
-\item Implications of the Last Mile: Delivering Sensitive Info to Mobile Devices
-\item System and Data Security Models and Implications
-\end{itemize}
+\frametitle{AIS in the Cloud}
+Start with an {\sl Information Object}.\\~\\
+This is a resource that contains valuable, managed data.\\
+Protected it via encryption, and digitally sign the encrypted information object. \\
+Now, the {\sl information object} has become an {\sl information package}.  This package can then be stored in any number of object or document-centric storage schemes common in cloud environments.
 \end{frame}
+
+\begin{frame}
+The information package moves through securely provisioned {\sl virtual networks}.  These networks are configured with strong encryption, and involve only those parties that need access to the distributed information.  They are configured dynamically, when needed.  They are multiplexed over shared physical infrastructure.
+\end{frame}
+
+\begin{frame}
+Distribution and policy enforcement is handled by a {\sl usage management mechanism}.  This usage management mechanism acts as both a policy decision point and a policy enforcement point. \\~\\
+This component can filter and modify content based on dynamic subject, environment, and resource centric policies. It furthermore is closely coupled to any PKI systems, and can extract, repackage, and resign any content en-route to a specified destination.
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Possible Research Topics}
+%\begin{itemize}
+%\item In VM usage management, or dedicated VM instances?
+%\item Cross Domain Communication Surfaces and Design
+%\item Controllable Bursting System Design  (inter- and intra- cloud)
+%\item Provisionable, dynamic network security
+%\item Data Management Standards: Rest, Motion, Use
+%\item Cloud Confidentiality, Integrity, Availability Strategies and Costs
+%\item SEIM Cloud Solutions and Architectures: How to build?
+%\item Implications of the Last Mile: Delivering Sensitive Info to Mobile Devices
+%\item System and Data Security Models and Implications
+%\end{itemize}
+%\end{frame}
 
 \section{Use Cases}
 
