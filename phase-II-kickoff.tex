@@ -226,12 +226,12 @@ We are to provide a cloud-based system integrable with MilCloud that supports th
 \frametitle{Attributes of Use Cases}
 Use cases embody:
 \begin{itemize}
-\item {\bf Who} --- U.S., Allied, Coalition
-\item {\bf What} --- managing sensitive and open information (giving, limiting, or denying access), impact of environmental attributes, bursting based on performance, differential security control application
-\item {\bf When} --- time bounds on information delivery
-\item {\bf Where} --- Geographic bounds on information dissemination
+\item {\bf Who} --- U.S., Allied, Coalition, computerized agents
+\item {\bf What} --- managing sensitive and open information (giving, limiting, or denying access), impact of environmental attributes, bursting based on performance, differential security control application, storage, processing, information display, dynamic information control (distribution, retraction)
+\item {\bf When} --- time bounds on information delivery, time boxed information
+\item {\bf Where} --- Geographic bounds on information dissemination, geographic bounds on information sources
 \item {\bf Why} --- N/A
-\item {\bf How} --- Dynamically and Securely, other
+\item {\bf How} --- Dynamic policy and security postures, other
 \end{itemize}
 \end{frame}
 
@@ -265,7 +265,7 @@ Now, the {\sl information object} has become a {\sl protected information object
 
 Policies are associated with protected information objects, forming {\sl protected information packages}.  Policies are not encrypted.
 
-{\sl Integrate open and closed source encryption algorithms.  Can we maintain secret inputs? }
+{\sl Integrate open and closed source encryption algorithms. }
 \end{frame}
 
 \begin{frame}
@@ -283,12 +283,12 @@ This component can filter and modify content based on dynamic subject, environme
 
 We have policy enforcement throughout the system.\\~\\
 
-{\sl Can we maintain secret inputs here too? How to manage keys and encryption algorithms?}
+{\sl Can we maintain secret inputs here too? How to manage keys and encryption algorithms? Multi-party computation is maturing and may have applicability.}
 \end{frame}
 
 \begin{frame}
 \frametitle{Processing}
-Processing nodes receive data and are able to commence processing.  These nodes are virtualized.  \\~\\
+Processing nodes receive data and are able to commence processing.  These nodes are virtualized, and all keys are pinned in memory when used.  \\~\\
 
 Nodes may either control computation via internal usage management, or be configured to handle information at a specific sensitivity level, or both. \\~\\
 
