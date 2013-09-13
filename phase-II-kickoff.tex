@@ -283,7 +283,7 @@ This component can filter and modify content based on dynamic subject, environme
 
 We have policy enforcement throughout the system.\\~\\
 
-{\sl Can we maintain secret inputs here too? How to manage keys and encryption algorithms? Multi-party computation is maturing and may have applicability.}
+{\sl Can we maintain secret inputs here too? How to manage keys and encryption algorithms? Every UMM must have access to content to do content modification. How many keys does a UMM need to manage? How do we secure key management subsystem?  Multi-party computation is maturing; applicable?.}
 \end{frame}
 
 \begin{frame}
@@ -292,22 +292,36 @@ Processing nodes receive data and are able to commence processing.  These nodes 
 
 Nodes may either control computation via internal usage management, or be configured to handle information at a specific sensitivity level, or both. \\~\\
 
-{\sl bursting?}
+{\sl bursting? Can we use an encryption scheme that supports usage management? e.g. portion marked fields are encrypted with different keys, and access becomes a key distribution issue rather than a content editing problem?}
 \end{frame}
 
 \begin{frame}
 \frametitle{Delivery and Consumption}
-Thick clients, web, mobile
+Thick clients, web, mobile clients, need to support multiple technologies, though we don't need to develop professional clients.  Proof on concept clients are acceptable.  Can we decrypt in Javascript, or do we need to write our own library (this may be out of scope)? \\~\\
+
+{\sl Do clients subscribe to feeds that deliver secure information packages? how do we retract content a user has been given access to? We must control the endpoints to make this happen; think Kindle when your CC doesn't process. }
 \end{frame}
 
 \begin{frame}
 \frametitle{SIEM}
-Logly, others?
+Logly, others? Opensource SIEM projects we can leverage? \\~\\
+
+{\sl This is important but starts to become a bit out of scope; we need to limit the work here, yet show possible forensic capability.}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Tie to OpenStack}
+OpenStack and by extension MilCould has specific functional components that provide the services we'll use to provide the functions we've outlined. \\~\\
+
+Tie the functional view into these specific OpenStack components to show how we will build what we propose. Show specific functions used in these functional components, highlight what may be missing today.\\~\\
+
+Discuss OpenStack relationship to MilCloud.
 \end{frame}
 
 \begin{frame}
 \frametitle{Other Concerns}
-system and data security models?
+system and data security models? Show how the supported system supports known security models (Bell-LaPadula, Brewer Nash, etc.)
 \end{frame}
 
 \section{Use Case Traceability}
